@@ -5,13 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"> -->
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
     <!-- ZTM Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
     <title>NASA API Pictures</title>
 </head>
 
 <body>
+    <!-- loader -->
+    <div class="loader hidden">
+        <img src="rocket.svg" alt="Rocket Loading Animation">
+    </div>
+    <!-- container -->
+    <div class="container">
+        <!-- navigation -->
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!-- results nav -->
+            <span class="navigation-items" id="results-nav">
+                <h3 class="clickable">Favorites</h3>
+                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable">Load More</h3>
+            </span>
+            <!-- favorites nav -->
+            <span class="navigation-items hidden" id="favorites-nav">
+                <h3 class="clickable">Load More NASA Images</h3>
+            </span>
+        </div>
+        <!-- images container -->
+        <div class="images-container">
+            <div class="card">
+                <a href="" title="View Full Image" target="_blank">
+                    <img src="https://apod.nasa.gov/apod/image/2106/OrionNebula_HubbleSerrano_2362.jpg"
+                        alt="NASA Picture of the Day" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h3 class="card-title">Title of Image</h3>
+                    <p class="clickable">Add to Favorites</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio pariatur soluta
+                        facere consequuntur minus, nesciunt tenetur rerum dignissimos et reiciendis veniam est at
+                        tempora harum neque dicta ex natus rem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Alias, earum porro debitis qui et consequuntur laboriosam quaerat. Ab explicabo quam corrupti
+                        eos! Inventore libero quo saepe debitis veritatis iste eveniet?</p>
+                    <small class="text-muted">
+                        <strong>12-12-2020</strong>
+                        <span>Copyright nfo</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- save confirmation -->
+    <div class="save-confirmed" hidden>
+        <h1>Added!</h1>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
